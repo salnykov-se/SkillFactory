@@ -28,7 +28,7 @@ def game_core_v2(number):
     ub = 100 #Set initial prediction upper bound
     while True:
         count+=1
-        predict = np.round(lb+ub) / 2 #predict average between ub and lb
+        predict = np.round((lb+ub) / 2) #predict average between ub and lb
         if number == predict: 
             return(count) # exit loop if guessed
         elif number > predict:
