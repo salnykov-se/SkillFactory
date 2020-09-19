@@ -9,6 +9,7 @@ Created on Sat Sep 19 18:59:52 2020
 import numpy as np
 
 #-----------------------------------------------------------------------------
+
 #Function counting number of attepts to guess a number: Original version
 def game_core_v1(number):
     count = 0
@@ -18,7 +19,8 @@ def game_core_v1(number):
         if number == predict: 
             return(count) # exit loop if number is guessed
         
-#-----------------------------------------------------------------------------        
+#-----------------------------------------------------------------------------
+            
 #Function counting number of attepts to guess a number: Improved version
 def game_core_v2(number):
     count = 0
@@ -35,6 +37,7 @@ def game_core_v2(number):
             ub = predict #if number below prediction,prediction becomes new ub
         
 #-----------------------------------------------------------------------------
+            
 #Function tests performance of two game algorythms against random number set
 #Function arguments are assumed to be a list consisting of 2 functions
 def score_game(game_core):
@@ -55,6 +58,8 @@ def score_game(game_core):
                      int(np.mean(count_ls))))
     
     return
+
+#-----------------------------------------------------------------------------
 
 # Run game with original and improved algorythm
 score_game([game_core_v1, game_core_v2])
